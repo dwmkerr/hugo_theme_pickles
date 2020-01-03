@@ -1,4 +1,6 @@
+# Abort on errors, trace all commands (for debugging).
 set -e
+set -x
 
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
 	echo "Not deploying pull requests."
