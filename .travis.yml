@@ -1,26 +1,18 @@
 language: node_js
-
 node_js:
-  - "12"
-
+- '12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 branches:
   only:
-    - master
-
+  - master
 before_script: bash ./bin/build.sh
-
 script:
-    - ls -al static/css/style.css
-
+- ls -al static/css/style.css
 after_success: bash ./bin/deploy.sh
-
 env:
   global:
   - GH_REF: github.com/dwmkerr/hugo_theme_pickles.git
-  - secure: "3+eJcE7w2FHiUCywL8jmk4c8M55crxZ8UYZ8sU/HQ+Q07usF/2loFCTv1kmZOs6/sYMIIdbs4E6W402eDkjL++VdQ8JWvs3b5ZHvZPlsw22gJzmoutRAhY+7zKUiAl8NyFcH5X+Co/hJL3OU747tI8pcgpY4cP4kfRetxtwP22n5ozdc5103BajgKjAQbmDDcOxjX2P/lc6Qghxwxtt6hmnT8wjwBPd3kyu9bz59bYPynlf+Igju+R+zHXKwbClNs3wcdTHXxtPl1EuOEYiMWcwGJUCwkLz7g2wVTIGkl9vbTGQqlxkobvOVdrPLoVyUlFLdQrB8t06MCUawan9K+gn0RUlo35tNGUeuuJGN8aaAgWJ2L0/QkW64qzHysHg/MfQ3KWkzUDhuVjoG/ZAW1k2pY6cBrvULPbQNC+pICbkYjHHqSUwjRp6xU7ZuLgEsDPN04lI/UGhfbVKfnpqujl4sDkTHugnwffUj76BaFT+H/g6S50v2HI9PHi6FDFRncTkR9LLpLYxdVTkr5A83m/7QOto+ZcZKKzoJeVxHZXRem2NvR090yg31bgzQv3oMopGSUOmzmbX27OwzV78XyTTYdGKcVRzZBo+oELY/tHL3UhDIyTWmdFt+FHQqHzz/rFZO3xaU/Pl5IC1YXB92pIQ9OPTqV6IaYEiwiqJuum0="
+  - secure: PCitxJnDnk0AwJRXFLV4qBxIosIMoehP7MK3CDs0ECLJg/TEagNkQo77786ZUTl9S47UF2vltv81XZdYRgXxcwXGIyrSfnRDr1jqWPno0ihdaIzdz7WHtiK8cf9XtfEo1CnuGuUZ9EEJpvZpBt77nzoBb5uoum8cJHUdFhZ3qC8Xq5hsCz56WqePEzg68KhqlF+Am/iVSQq4FpNd2AY31+uUeIiXyU7azZs8VRUWkrfOKAPOM64xjLk06I5Mf6NloWfRtNcEyoyr74LIlmc4JN8knuKpofU/d0/WTGkscpytCA87xwFZDLeW0Vj8x6S930tshrm0lxsEF+lZCR8LoV6cyPaym7Z/HRM/zZPOY7MCOpiVLTCan/0gcsz1YHvgJZD+5pxkfmnU2c6OxPAGYKmRne+V0KQwqHYYKb5R0EJpHg87Um0TCPtQEuJHA1eHSDO3MIng5SoguXjqQw19IXkHgpb9+JnGKti2YgTGNYosFUWfEYGS7OgRULiJ/nnY2k5uBSCn54nVK58+z5eXjNjmW8oiQXwAYBbJpnHS+3pAU9QC/82IBX2irJJWUKmSbBHTpw/jbYeURKva66kSSMoEMIacaaI5J7wwtMo3trjiWg5sVDz7pEvH3pEczulKOh5XGgT3EcCIgKg9zKxDZ63tCjKlwqP20BxBjGdPuJU=
